@@ -3,8 +3,7 @@ import static ninja.rico.Collections.addWithoutDuplicates
 
 def call(Map args = [:], Closure body) {
     def defaultArgs = [
-        serviceAccount: 'jenkins',
-        nodeSelector: 'jenkins-slave',
+        nodeSelector: 'jenkins=slave',
         yaml: '''\
             apiVersion: v1
             kind: Pod
